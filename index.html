@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noticias BA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg black">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">
+                    <!-- Logo -->
+                    <img src="./assets/img/img-logo.png" alt="" class="img-logo" /></a>
+                <!-- Boton collapse -->
+                <button class="navbar-toggler navbar-dark bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <!-- Enlace Espectaculos -->
+                            <a class="nav-link white" id="cultura" href="#">Cultura</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Enlace Deportes -->
+                            <a class="nav-link white" id="deportes" href="#">Deportes</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link white dropdown-toggle" href="#" id="salud" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Salud
+                            </a>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item  white bg-dark" id="novedades" href="#">Novedades</a></li>
+                                <li><a class="dropdown-item  white bg-dark" id="covid" href="./covid.html">Covid</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Enlace Contacto -->
+                            <a class="nav-link white" id="contacto" href="#contacto-modal" data-bs-toggle="modal">Contacto</a>
+                        </li>
+                    </ul>
+                    <div id="buscar">
+                        <form class="d-flex form-search">
+                            <input class="form-control me-2" id="noticia" type="search" placeholder="Search" aria-label="Search" />
+                            <!-- Boton de busqueda -->
+                            <a href="#mensaje">
+                                <button class="btn btn-outline-secondary button-search" id="button-search" type="submit">Search 
+
+                            </button>
+                            </a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Carousel-->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/img/noticias ba.jpg" class="d-block w-100" alt="carousel1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>primer slide</h3>
+                    <p></p>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/argentina.jpg" class="d-block w-100" alt="Carousel2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>segundo slide</h3>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/obelisco.jpg" class="d-block w-100" alt="Carousel3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>tercer slide</h3>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/covid.jpg" class="d-block w-100" alt="carousel4">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>cuarto slide</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+
+    <!-- Sección de noticias-->
+
+    <div id="mensaje"></div>
+    <div class="container wrapper-general">
+        <!-- <h1 class="text-center titulo-seccion">Título sección</h1> -->
+        <div class="row justify-content-around noticias" id="contenedor-noticias">
+            <!-- BORRADO PORQUE SE ESTA INSERTANDO CON JS CON LA FUNCION MOSTRARNOTICIAS() 
+            <div class="card col-lg-4 col-md-6 col-sm-12">
+            <img src="./assets/img/ejemploNoticia.png" class="card-img-top imagen-noticia" alt="img-noticia">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-dark">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">
+                Publicado 2 days ago
+            </div>
+        </div>
+        <div class="card col-lg-4 col-md-6 col-sm-12">
+            <img src="./assets/img/ejemploNoticia.png" class="card-img-top imagen-noticia" alt="img-noticia">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-dark">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">
+                Publicado 2 days ago
+            </div>
+        </div>
+        <div class="card col-lg-4 col-md-6 col-sm-12">
+            <img src="./assets/img/ejemploNoticia.png" class="card-img-top imagen-noticia" alt="img-noticia">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-dark">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">
+                Publicado 2 days ago
+            </div>
+        </div> -->
+        </div>
+    </div>
+    <!------------>
+
+    <footer>
+        <div class="footer-black-bg">
+            <div id="footer" class="footer-content row">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <ul class="lista-desordenada-logos">
+                                <li>
+                                    <a href="https://www.facebook.com/"><img src="./assets/img/facebook-white.svg" class="img-fluid" width="35px" height="35px"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/"><img src="./assets/img/instagram-white.svg" class="img-fluid" width="35px" height="35px"> </a>
+                                </li>
+                                <li>
+                                    <a href="https://t.me/"><img src="./assets/img/telegram-white.svg" class="img-fluid" width="35px" height="35px"></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/"><img src="./assets/img/twitter-white.svg" class="img-fluid" width="35px" height="35px"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/"><img src="./assets/img/youtube-white.svg" class="img-fluid" width="35px" height="35px"></a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="col-sm-4">
+                            <a href=""><img src="./assets/img/text17.png" width="300px" height="50px" class="img-fluid"></a>
+                        </div>
+
+
+                        <div class="col-sm-4">
+                            <a href="https://www.buenosaires.gob.ar/"><img src="https://www.buenosaires.gob.ar/sites/gcaba/files/vamos_ba_0.png" class="img-fluid"></a>
+                        </div>
+
+
+                        <div class="container-li">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <h3>NoticiasBA</h3>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <a href="#contacto-modal" data-bs-toggle="modal">Contacto</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-bs-toggle="modal">Cultura</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-sm-5">
+                                    <h3>Mapa de sitio</h3>
+                                    <ul class="list-inline">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <li>
+                                                        <a href="#deportes">Deportes </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Salud </a>
+                                                    </li>
+                                                </div>
+                                                <div class="col">
+                                                    <li>
+                                                        <a href="#">Novedades</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/covid.html">Covid </a>
+                                                    </li>
+                                                </div>
+                                    </ul>
+                                    </div>
+
+
+                                    <div class="col-sm-5">
+                                        <h3 class="otros">Páginas Oficiales</h3>
+                                        <ul class="list-inline">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <li><a href="https://www.buenosaires.gob.ar/jefedegobierno">Jefatura de Gobierno</a></li>
+                                                        <li><a href="https://www.buenosaires.gob.ar/vicejefatura">Vicejefatura</a></li>
+                                                        <li><a href="https://www.buenosaires.gob.ar/jefaturadegabinete">Jefatura de gabinete</a></li>
+                                                    </div>
+                                                    <div class="col">
+                                                        <li><a href="https://www.buenosaires.gob.ar/salud">Ministerio de Salud</a></li>
+                                                        <li><a href="https://www.buenosaires.gob.ar/educacion">Ministerio de Educación</a></li>
+                                                        <li><a href="https://www.buenosaires.gob.ar/cultura">Ministerio de Cultura</a></li>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </div>
+
+                                    </div>
+
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-span">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p class="disclamer"><span>República Argentina </span><span> | </span><span> Todos los derechos reservados.</span>
+                                                    <span> | </span><span>Politica de privacidad</span> | <span>Términos y condiciones</span>
+                                                    <span>2021 </span></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    </footer>
+
+    <div class="modal fade" id="contacto-modal" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Contacto</h4>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form id="form-contacto" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xoqprbnz" method="post">
+                        <fieldset id="fs-frm-inputs">
+                            <div class="form-group">
+                                <label for="nombre" class="col-form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Su nombre" required>
+                                <label for="mail" class="col-form-label">Email:</label>
+                                <input type="email" name="mail" id="mail" class="form-control" name="_replyto" required placeholder="mimail@ejemplo.com">
+                                <label for="mensaje" class="col-form-label">Mensaje:</label>
+                                <textarea name="mensaje" class="form-control" id="mensaje" name="message" cols="30" rows="5" required placeholder="Deje su mensaje..."></textarea>
+                            </div>
+                            <br>
+                            <input type="submit" class="btn btn-success" value="Enviar" id="btn-enviar"></input>
+                            <button type="button" id="btn-cancelar" class="btn btn-danger" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modalEliminar">Cancelar</button>
+                            <input type="hidden" name="_subject" id="email-subject" value="Noticias BA | Contacto">
+                            <p id="estado">parrafo</p>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <!-- Script noticias -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/noticias.js"></script>
+    <script src="./assets/js/carousel.js"></script>
+    <script src="./assets/js/btn-busqueda.js"></script>
+    <script src="./assets/js/formspree.js"></script>
+    
+</body>
+
+</html>
