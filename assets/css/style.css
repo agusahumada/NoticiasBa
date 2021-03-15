@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+.black {
+  background-color: #000000;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.white:hover {
+  color: red;
+}
+
+.button-search:hover {
+  color: #000000;
+}
+
+.img-logo {
+  width: 300px;
+  height: 50px;
+}
+
+@media (max-width: 700px) {
+  .img-logo {
+    width: 136px;
+    height: 23px;
+  }
+  .form-search {
+    margin-right: 15px;
+  }
+}
+
+.form-search {
+  margin-right: 25px;
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+.error {
+  padding: 1rem;
+  border: 1px solid red;
+  background-color: rgb(249, 121, 121);
+  color: white;
+  text-align: center;
+}
+
+#footer {
+  width: 100%;
+  background-color: black;
+  padding-top: 22px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+a {
+  font-family: "Roboto Slab", serif;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+.lista-desordenada-logos {
+  margin-left: 0px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Archivo Narrow", sans-serif;
+  color: #cacaca;
+  line-height: 3.6;
+  padding: 0px;
+  padding-left: 0px;
+  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  list-style: none;
+  display: inline-flex;
+}
+
+.lista-desordenada-logos li {
+  margin: 5px;
+}
+
+h3 {
+  font-family: "Roboto Slab", serif;
+  color: white;
+  font-size: 20px;
+}
+
+.img-fluid {
+  margin: 5px 5px 5px 5px;
+}
+
+.disclamer {
+  color: white;
+}
+
+.container-li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.container-span {
+  padding-top: 15px;
+}
+
+.body {
+  max-width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper-general {
+  width: 100%;
+  padding: 0;
+}
+
+.titulo-seccion {
+  font-family: "Roboto Slab", serif;
+  text-transform: uppercase;
+  font-size: 4.2em;
+  margin: 50px;
+}
+
+@media (max-width: 700px) {
+  .titulo-seccion {
+    font-size: 2.5em;
+  }
+}
+
+.card {
+  max-width: 20rem;
+  margin: 5px;
+  padding: 0;
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+.imagen-covid {
+  width: 200px;
+  display: inline-block;
+}
+
+.d-block {
+  max-height: 550px;
+  opacity: 90%;
+}
+
+.modal-header {
+  background-color: #000000;
+  color: #cacaca;
+  font-family: "Roboto Slab", serif;
+}
+
+.modal-body {
+  background-color: #000000;
+  color: #cacaca;
+  font-family: "Roboto Slab", serif;
+}
+
+.modal-footer {
+  background-color: #000000;
+  color: #cacaca;
+  font-family: "Roboto Slab", serif;
+}
+
+/* cards covid */
+
+.flip-container {
+  background-color: transparent;
+  max-width: 80%;
+  height: 400px;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+.flip-container .card-covid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* text-align: center; */
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+}
+
+.card-covid h3,
+.card-covid p {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* GIRA HORIZONTAL */
+
+.flip-container:hover .card-covid {
+  transform: rotateY(180deg);
+}
+
+.frente,
+.dorso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.frente {
+  background-color: white;
+  color: black;
+  display: flex;
+  padding-top: 0px;
+  flex-direction: column;
+}
+
+.frente h3 {
+  color: black;
+  font-weight: bold;
+}
+
+.dorso {
+  background-color: black;
+  color: red;
+  /*transform: rotateX(180deg);*/
+  transform: rotateY(180deg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.dorso p {
+  font-size: 0.65em;
+  color: white;
+}
+
+.dorso .dato-covid {
+  font-size: 2em;
+}
+
+.preguntas-frecuentes {
+  margin: 40px 0;
+  text-transform: uppercase;
+}
+
+.highlight {
+  background: yellow;
+}
